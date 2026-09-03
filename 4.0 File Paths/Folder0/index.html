@@ -1,0 +1,62 @@
+<!--  Note
+
+The Absolute and Relative Paths
+
+Files vs Folders
+File paths are the text with [ / ] that tell the browser where to find a file. 
+There are two types of file paths: absolute and relative.
+
+Absolute File Path 
+Absolute File Paths are the full path to a file or folder. 
+They start with the root directory and include all the folders leading to the file.
+ For example, an absolute path might look like this: /Users/username/Documents/website/index.html
+
+For web development what is more useful is a Relative File Path.
+
+We can use relative file paths to link to files that are in the same folder or in a subfolder.
+For example, if we have a file called "index.html" in the same folder as our
+
+We can specify the path relative to our starting point
+
+Relative File paths are usually shorter and easier to read.
+
+for example: instead of /Users/username/Documents/website/index.html
+It will be ./index.html
+or if the file is in a subfolder called "images" we can use ./images/picture.jpg
+
+Relative Paths have Special Characters
+
+[. ] - This means the current folder
+To stay within the current directory and look around there. Relative to the starting point
+
+[ .. ] - This means the parent folder
+To go up a level, then goes to the path you want to navigate, it starts on the index.html 
+
+
+
+ 
+-->
+
+
+
+
+<h1>All the Animals</h1>
+<h2>Rabbit:</h2>
+
+<img src="rabbit.png" alt="A cute rabbit"/>
+
+<h2>Cat:</h2>
+
+<img src="Folder3/cat.png" alt="A cute cat"/>
+
+<h2>Dog:</h2>
+
+<img src="../dog.png" alt="A cute dog"/>
+
+<h2>Fish:</h2>
+
+<img src="../Folder1/fish.png" alt="fih"/>
+
+<h2>Bird:</h2>
+
+<img src="../Folder1/Folder2/bird.png" alt="birb"/>
