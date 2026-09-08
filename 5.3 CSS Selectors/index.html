@@ -1,0 +1,166 @@
+<!--
+
+NOtes on CSS Selectors
+
+Se can CSS rule by specifying the Property separated byt Colon and the Value separated by Semicolon.
+
+for example color: blue; font-size: 20px;
+
+What is a CSS Selector?
+It's a part that SELECT the the HTML in order to apply whicever rules go in between the curly braces.
+the curly braces have color:blue, and it select the h1 element, so the h1 element will be blue.
+ex:
+h1 {
+  color: blue;
+  }
+
+Those selectors is targeting all H1 into blue. therefore all H1 will turn into blue.
+
+
+
+
+CLASS SELECTOR
+
+.red-heading {
+  color: red;
+  font-size: 20px;
+}
+
+It requires a . or dot, then the name of the class. in this case, it's red-heading. 
+and it will target all elements with the class of red-heading.
+
+What is a Class?
+A class is something that can be added as an attribute tto any HTRML element. 
+and it can be used to target that element with CSS.
+
+THis attribute grouping elements together, so that they can be styled in the same way.
+
+this Class can be applyied in the attribute of the html element.
+
+Note that the Class name is case sensitive, so it must be the same as the one in the CSS.
+
+If we have multiple elements with the same class, they will all be styled the same way doesn't matter what Element 
+they are.
+
+
+
+ID Selector
+
+Every ID selector have the special character of # or hash, then the name of the ID. 
+this select all elements with a particular ID attribute.
+
+in the example. it uses the attribute id
+
+<h2 id="main">Main Heading</h2>
+
+#main {
+  color: red;
+  font-size: 20px;
+}
+
+Thus what is the difference between Class and ID?
+The difference is that the ID is unique, and it can only be used once in a page
+While a Class can be used multiple times in a page.
+
+
+
+Attribute Selector
+
+Another way to seect parts of the HTML is using the attribute selector. We can create a HTML tag and add as many
+attributes as we want. 
+Then we can use the attribute selector to target those elements with a particular attribute.
+
+We can select these elements that have particular attributes or particular attributes values by 
+by using the attribute selector. which is the Parentheses [].
+
+example:
+
+p[dragganble] {
+  color: red;
+  font-size: 20px;
+}
+
+What this do, is to select all paragraph elements with the attribute draggable, then apply the folowing CSS rules 
+to them.
+
+Thus every element with the attribute draggable will be red and have a font size of 20px.
+
+You can also add a value to the attribute selector, 
+so that it will only select the elements with that particular value.
+
+For example:
+
+p[dragganble=false] {
+  color: red;
+  font-size: 20px;
+}
+
+means that it will only select the paragraph elements with the attribute draggable and the value of false 
+that will be coloured red and have a font size of 20px.
+
+
+
+The Universal Selector
+
+The special character for the Universal selector is the Asterisk *.
+After the asterisk there will be the CSS rules that will be applied to all elements in the HTML.
+
+in CSS, the Universal selector is used to select all elements in the HTML document. 
+It is represented by the asterisk (*) symbol. When you use the Universal selector, 
+it applies the specified CSS rules to every element on the page, regardless of its type or class.
+
+Asterisk means select all
+
+*{
+  Color: red;
+  font-size: 20px;
+  }
+
+Means that all elements in the HTML will be red and have a font size of 20px.
+
+
+
+
+
+
+-->
+
+<h2 class="red-text"> Red </h2>
+<h2 class="green-text"> Green </h2>
+<h2 class="blue-text"> Blue </h2>
+
+
+<hr />
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <h1>CSS Selectors</h1>
+  <h2>Applying CSS to Different Parts of HTML</h2>
+    <!-- TODO 1: Set the CSS for all paragraph tags to "color: red" -->
+  <p class="note">1. The element selector targets elements based on their HTML tag name.</p>
+
+  <ol>
+    <!-- TODO 2: Set the CSS for all elements with a class of "note" to "font-size: 20px" -->
+    <li class="note" value="2">Class selectors target elements based on the value of the class attribute.</li>
+
+    <!-- TODO 3: Set the CSS for the element with an id of "id-selector-demo" to "color: green" -->
+    <li class="note" id="id-selector-demo" value="3">ID selectors target elements based on the value of the id
+      attribute.</li>
+
+    <!-- TODO 4: Set the CSS for the li elements that have the "value" attribute set to "4" to have "color: blue" -->
+    <li class="note" value="4">Attribute selectors target elements based on their attributes and values.</li>
+
+    <!-- TODO 5: Set all elements to have "text-align: center" -->
+    <li class="note" value="5">The universal selector targets all elements.</li>
+  </ol>
+</body>
+
+</html>
